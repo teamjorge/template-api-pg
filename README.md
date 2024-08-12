@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-* Clone this repo.
+* Clone this repo or use the Github `Use This Template` functionality.
 * Delete the `.git` directory and run `git init`.
 * Rename the parent directory and `go.mod` module to your project's name
 
@@ -52,6 +52,14 @@ go build -o . ./...
 * spf/viper - Config management
 
 ## Specifics
+
+### Config
+
+Configuration is handled by [`viper`](https://github.com/spf13/viper) and is recommended to be driven by environment variables. A config file has been supplied for cases where using a DevContainer or environment variables will be troublesome/impossible.
+
+The `internal/config/init.go` contains the initialisation code for the config properties. This most likely is not the most effective of doing it, so feel free to change it.
+
+The config package is by default initialised in the `cmd/server/main.go` with the `_ "template-api-pg/internal/config"` import. This ensures that the `init` function is called and viper has pre-parsed any variables specified. Should you wish to create an additional executable that will utilise the config files, please include the same import in that `main.go` file.
 
 ### Database
 

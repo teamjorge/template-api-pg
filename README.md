@@ -2,6 +2,10 @@
 
     A quickstart template for building a golang API with Postgres integration.
 
+## But Why
+
+After using this pattern over 20 times, I've decided that I'll create a template and skip the couple of hours of boilerplating I have to do every time. Is it truly optimable in every regard? No, probably not. But it is fairly easy to use and pretty solid. Any suggestions for improvements or general critique is much appreciated.
+
 ## Getting Started
 
 * Clone this repo or use the Github `Use This Template` functionality.

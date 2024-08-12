@@ -1,0 +1,11 @@
+development:
+  dialect: postgres
+  datasource: host=${POSTGRES_HOSTNAME} dbname=${POSTGRES_DB} user=${POSTGRES_USER} password=${POSTGRES_PASSWORD} sslmode=disable
+  dir: migrations
+  table: migrations
+
+production:
+  dialect: postgres
+  datasource: host=${POSTGRES_HOSTNAME} dbname=${POSTGRES_DB} user=${POSTGRES_USER} password=${POSTGRES_PASSWORD} sslmode=require
+  dir: migrations
+  table: migrations
